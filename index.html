@@ -24,6 +24,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 
   <title>Omnifood</title>
 </head>
@@ -36,17 +37,17 @@
     </a>
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a href="#" class="main-nav-link">How it works</a></li>
-        <li><a href="#" class="main-nav-link">Meals</a></li>
-        <li><a href="#" class="main-nav-link">Testimonials</a></li>
-        <li><a href="#" class="main-nav-link">Pricing</a></li>
-        <li><a href="#" class="main-nav-link nav-cta">Try for free</a></li>
+        <li><a href="#how" class="main-nav-link">How it works</a></li>
+        <li><a href="#meals" class="main-nav-link">Meals</a></li>
+        <li><a href="#testimonials" class="main-nav-link">Testimonials</a></li>
+        <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+        <li><a href="#cta" class="main-nav-link nav-cta">Try for free</a></li>
       </ul>
     </nav>
 
     <button class="btn-mobile-nav">
-      <ion-icon class="icon-mobile-nav " name="menu-outline"></ion-icon>
-      <ion-icon class="icon-mobile-nav " name="close-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
     </button>
 
   </header>
@@ -61,8 +62,8 @@
             personal
             tastes and nutritional needs.
           </p>
-          <a href="#" class="btn btn--full margin-right-sm">Start eatting well</a>
-          <a href="#" class="btn btn--outline">Learn more &darr; </a>
+          <a href="#cta" class="btn btn--full margin-right-sm">Start eatting well</a>
+          <a href="#how" class="btn btn--outline">Learn more &darr; </a>
 
           <div class="delivered-meals">
             <div class="delivered-imgs">
@@ -104,7 +105,7 @@
       </div>
     </section>
 
-    <section class="section-how">
+    <section class="section-how" id="how">
       <div class="container">
         <span class="subheading">How it works</span>
         <h2 class="heading-secondary">
@@ -164,7 +165,7 @@
 
     </section>
 
-    <section class="section-meals">
+    <section class="section-meals" id="meals">
       <div class="container center-text">
         <span class="subheading">Meals</span>
         <h2 class="heading-secondary">
@@ -271,7 +272,7 @@
 
     </section>
 
-    <section class="section-testimonials grid--2-cols">
+    <section class="section-testimonials grid--2-cols" id="testimonials">
       <div class="testimonials-container">
         <span class="subheading">Testimonials</span>
         <h2 class="heading-secondary">
@@ -354,7 +355,7 @@
       </div>
     </section>
 
-    <section class="section-pricing">
+    <section class="section-pricing" id="pricing">
       <div class="container">
         <span class="subheading">Pricing</span>
         <h2 class="heading-secondary">
@@ -452,7 +453,7 @@
 
     </section>
 
-    <section class="section-cta">
+    <section class="section-cta" id="cta">
       <div class="container">
         <div class="cta">
           <div class="cta-text-box">
@@ -505,12 +506,14 @@
         </a>
 
         <ul class="social-link">
-          <li> <a class="footer-link" href=""> <ion-icon class="social-icon" name="logo-instagram"></ion-icon> </a> </li>
+          <li> <a class="footer-link" href=""> <ion-icon class="social-icon" name="logo-instagram"></ion-icon> </a>
+          </li>
           <li> <a class="footer-link" href=""> <ion-icon class="social-icon" name="logo-facebook"></ion-icon> </a> </li>
           <li> <a class="footer-link" href=""> <ion-icon class="social-icon" name="logo-twitter"></ion-icon> </a> </li>
         </ul>
 
-        <p class="copyright">Copyright &copy; 2024 by Omnifood, Inc. All right reserved.</p>
+        <p class="copyright">Copyright &copy; <span id="curentYear" class="years">2027</span> by Omnifood, Inc. All
+          right reserved.</p>
       </div>
       <div class="address-col">
         <P class="footer-heading">Contact us</P>
@@ -531,7 +534,7 @@
           <li> <a class="footer-link" href="#">Create account</a> </li>
           <li> <a class="footer-link" href="#">sign in</a> </li>
           <li> <a class="footer-link" href="#">ios app</a> </li>
-          <li> <a class="footer-link"href="#">Android app</a> </li>
+          <li> <a class="footer-link" href="#">Android app</a> </li>
         </ul>
       </nav>
       <nav class="nav-col">
@@ -554,6 +557,9 @@
     </div>
 
   </footer>
+
+  <script src="js/script.js"></script>
+
 
 </body>
 
