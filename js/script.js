@@ -41,6 +41,26 @@ allLinks.forEach(function (link) {
   });
 });
 
+// Adding sticky when hero go out of view
+
+const sectionheroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if(ent.isIntersecting === false){
+      document.querySelector(".header").classList.add("sticky");
+    }
+    console.log(ent);
+  },
+  {
+    // Just inside browser window
+    root: null,
+    threshold: 0,
+  }
+);
+obs.observe(sectionheroEl);
+
 // ///////////////////////////////////////////////////////////
 // // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
