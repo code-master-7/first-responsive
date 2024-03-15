@@ -35,7 +35,7 @@ allLinks.forEach(function (link) {
     }
 
     // Closing menu in mobile
-    if (link.classList.contains("main-nav0link")) {
+    if (link.classList.contains("main-nav-link")) {
       headerEl.classList.remove("nav-open");
     }
   });
