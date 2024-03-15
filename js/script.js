@@ -35,10 +35,8 @@ allLinks.forEach(function (link) {
     }
 
     // Closing menu in mobile
-    console.log("Should closed");
     if (link.classList.contains("main-nav-link")) {
       headerEl.classList.remove("nav-open");
-      console.log("Closing");
     }
   });
 });
