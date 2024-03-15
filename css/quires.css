@@ -139,7 +139,7 @@
     align-items: center;
     justify-content: center;
 
-    transition: all 2s ease;
+    transition: all 0.5s ease;
 
     /* HIDE navagation */
     /* DONT allow transaction */
