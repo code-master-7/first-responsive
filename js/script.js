@@ -36,7 +36,7 @@ allLinks.forEach(function (link) {
 
     // Closing menu in mobile
     if (link.classList.contains("main-nav0link")) {
-      headerEl.classList.toggle("nav-open");
+      headerEl.classList.remove("nav-open");
     }
   });
 });
@@ -48,15 +48,18 @@ const sectionheroEl = document.querySelector(".section-hero");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    if(ent.isIntersecting === false){
-      document.querySelector(".header").classList.add("sticky");
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    } else {
+      document.body.classList.remove("sticky");
     }
-    console.log(ent);
+    // console.log(ent);
   },
   {
-    // Just inside browser window
+    // Just inside browser window/viewpoint
     root: null,
     threshold: 0,
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionheroEl);
